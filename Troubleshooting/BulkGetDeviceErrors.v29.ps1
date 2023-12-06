@@ -44,14 +44,14 @@
 
 [CmdletBinding()]
     Param (
-        [Parameter(Mandatory=$False)] [int]$Days = 2,                                           ## Number of days to search for Errors
-        [Parameter(Mandatory=$False)] [int]$DeviceCount = 10000,                                ## Change Maximum Number of devices results to return
+        [Parameter(Mandatory=$False)] [int]$Days = 7,                                           ## Number of days to search for Errors
+        [Parameter(Mandatory=$False)] [int]$DeviceCount = 5000,                                ## Change Maximum Number of devices results to return
         [Parameter(Mandatory=$False)] [switch]$GridView,                                        ## Display Output via Powershell Out-Gridview
-        [Parameter(Mandatory=$False)] [switch]$Export = $true,                                  ## Generate CSV / XLS Output Files
+        [Parameter(Mandatory=$False)] [switch]$Export = $false,                                  ## Generate CSV / XLS Output Files
         [Parameter(Mandatory=$False)] [switch]$Launch,                                          ## Launch XLS or CSV file 
         [Parameter(Mandatory=$False)] [string]$Delimiter = ',',                                 ## specify ',' or ';' Delimiter for XLS & CSV file
         [Parameter(Mandatory=$False)] [string]$ExportPath = "$PSScriptRoot",                    ## Export Path
-        [Parameter(Mandatory=$False)] [switch]$CustomColumn = $true,                            ## Update Backup.Manangement Custom Column
+        [Parameter(Mandatory=$False)] [switch]$CustomColumn = $false,                            ## Update Backup.Manangement Custom Column
         [Parameter(Mandatory=$False)] [string]$ColumnCode = "AA2045",                           ## Column Code ShortID to Populate / Clear
         [Parameter(Mandatory=$False)] [string]$TaskPath = "$env:userprofile\BackupNerdScripts", ## Path to Store/Invoke Scheduled Backup Nerd Script Credentials and Tasks
         [Parameter(Mandatory=$False)] [switch]$ClearCredentials                                 ## Remove Stored API Credentials at start of script
