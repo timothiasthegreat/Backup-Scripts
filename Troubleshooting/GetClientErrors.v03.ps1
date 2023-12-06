@@ -162,25 +162,25 @@ Do {
 
     }
 
-}until ($counter -ge 500)
+}until ($counter -ge 1)
 
 
 
 # Examples of DO UNTIL 
 
-do {
-    Start-Sleep -Seconds 5
-    $status = & "C:\Program Files\Backup Manager\ClientTool.exe" control.status.get
-    Write-output "$status | Waiting for Backup Job not Idle"
-    }
-    until ($status -ne "Idle")
+#do {
+#    Start-Sleep -Seconds 5
+#    $status = & "C:\Program Files\Backup Manager\ClientTool.exe" control.status.get
+#    Write-output "$status | Waiting for Backup Job not Idle"
+#    }
+#    until ($status -ne "Idle")
 
 
-do {
-    Start-Sleep -Seconds 5
-    $status = & "C:\Program Files\Backup Manager\ClientTool.exe" control.status.get
-    Write-output "$status | Waiting for Backup Job is Idle"
-    }
-    until ($status -eq "Idle")
+#do {
+#    Start-Sleep -Seconds 5
+#    $status = & "C:\Program Files\Backup Manager\ClientTool.exe" control.status.get
+#    Write-output "$status | Waiting for Backup Job is Idle"
+#    }
+#    until ($status -eq "Idle")
 
 
